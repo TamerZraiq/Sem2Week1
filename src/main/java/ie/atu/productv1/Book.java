@@ -1,6 +1,7 @@
 package ie.atu.productv1;
 
 import java.text.NumberFormat;
+import java.util.Locale;
 
 public class Book {
 
@@ -51,7 +52,8 @@ public class Book {
     }
 
     public String getPriceFormatted() {
-        NumberFormat currency = NumberFormat.getCurrencyInstance();
+        Locale cLocale = new Locale.Builder().setLanguage("en").setRegion("GR").build();
+        NumberFormat currency = NumberFormat.getCurrencyInstance(cLocale);
         return currency.format(price);
     }
 

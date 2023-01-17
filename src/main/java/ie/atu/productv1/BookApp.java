@@ -1,5 +1,7 @@
 package ie.atu.productv1;
 
+import java.util.Currency;
+import java.util.Locale;
 import java.util.Scanner;
 
 public class BookApp {
@@ -15,7 +17,7 @@ public class BookApp {
         while (choice.equalsIgnoreCase("y")) {
             System.out.print("Enter book code: ");
             String bookCode = sc.nextLine();  // read the book code
-
+            String euro = "\u20ac";
             // get the book object
             Book yourBook = BookDB.getBook(bookCode);
 
@@ -23,7 +25,7 @@ public class BookApp {
             System.out.println();
             if (yourBook != null) {
                 System.out.println("Description: " + yourBook.toString());
-                System.out.println("Price:       " + yourBook.getPriceFormatted());
+                System.out.println("Price:       "  + yourBook.getPriceFormatted());
             } else {
                 System.out.println("No book matches this book code.");
             }
@@ -31,7 +33,6 @@ public class BookApp {
             System.out.println();
             System.out.println("Book count: " + Book.getCount() + "\n");
 
-            // see if the user wants to continue
             System.out.print("Continue? (y/n): ");
             choice = sc.nextLine();
             System.out.println();
