@@ -10,46 +10,53 @@ public class ProductDB {
 
         Product p = null;
 
-        if (productCode.equalsIgnoreCase("java")) {
-            p = new Product();
-            p.setCode(productCode);
-            p.setDescription("GMIT Java Programming");
-            p.setPrice(57.50);
-            //       p.setAuthor("Joe Brown");
+        if (productCode.equalsIgnoreCase("java"))
+        {
+           Book myBook = new Book();
+            myBook.setCode(productCode);
+            myBook.setDescription("ATU Java Programming");
+            myBook.setPrice(57.50);
+            myBook.setAuthor("Joe Brown");
+            p = myBook;
         } else if (productCode.equalsIgnoreCase("jsp")) {
-            p = new Product();
-            p.setCode(productCode);
-            p.setDescription("Java Servlets and JSP");
-            p.setPrice(57.50);
-            //       p.setAuthor("Mike White");
+            Book myBook = new Book();
+            myBook.setCode(productCode);
+            myBook.setDescription("Java Servlets and JSP");
+            myBook.setPrice(57.50);
+            myBook.setAuthor("Mike White");
+            p = myBook;
         } else if (productCode.equalsIgnoreCase("mysql")) {
-            p = new Product();
-            p.setCode(productCode);
-            p.setDescription("Lennon's MySQL");
-            p.setPrice(54.50);
-            //         p.setAuthor("Jim Lennon");
-
-        } else if (productCode.equalsIgnoreCase("studios")) {
-            p = new Product();
-            p.setCode(productCode);
-            p.setDescription("Visual Studios");
-            p.setPrice(57.50);
-            //   p.setVersion("Microsoft 1.1");
-        } else if (productCode.equalsIgnoreCase("eclipse")) {
-            p = new Product();
-            p.setCode(productCode);
-            p.setDescription("Build Java apps");
-            p.setPrice(57.50);
-            //  p.setVersion("Eclipse Neon");
-        } else if (productCode.equalsIgnoreCase("oracle")) {
-            p = new Product();
-            p.setCode(productCode);
-            p.setDescription("Latest MySQL");
-            p.setPrice(54.50);
-            // p.setVersion("Oracle 3.0");
+            Book myBook = new Book();
+            myBook.setCode(productCode);
+            myBook.setDescription("Lennon's MySQL");
+            myBook.setPrice(54.50);
+            myBook.setAuthor("Jim Lennon");
+            p = myBook;
         }
 
 
+        if (productCode.equalsIgnoreCase("studios")) {
+            Software mySoftware = new Software();
+            mySoftware.setCode(productCode);
+            mySoftware.setDescription("Visual Studios");
+            mySoftware.setPrice(57.50);
+            mySoftware.setVersion("Microsoft 1.1");
+            p = mySoftware;
+        } else if (productCode.equalsIgnoreCase("eclipse")) {
+            Software mySoftware = new Software();
+            mySoftware.setCode(productCode);
+            mySoftware.setDescription("Build Java apps");
+            mySoftware.setPrice(57.50);
+            mySoftware.setVersion("Eclipse Neon");
+            p = mySoftware;
+        } else if (productCode.equalsIgnoreCase("oracle")) {
+            Software mySoftware = new Software();
+            mySoftware.setCode(productCode);
+            mySoftware.setDescription("Latest MySQL");
+            mySoftware.setPrice(54.50);
+            mySoftware.setVersion("Oracle 3.0");
+            p = mySoftware;
+        }
         return p;
     }
 }

@@ -17,8 +17,7 @@ public class BookApp {
         while (choice.equalsIgnoreCase("y")) {
             System.out.print("Enter book code: ");
             String bookCode = sc.nextLine();  // read the book code
-            String euro = "\u20ac";
-            // get the book object
+
             Book yourBook = BookDB.getBook(bookCode);
 
             // display the output
