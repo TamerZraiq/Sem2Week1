@@ -3,7 +3,7 @@ package ie.atu.productv3;
 import java.text.NumberFormat;
 
 public class Product {
-
+    //contains all the common attributes of Book and Software
     private String code;
     private String description;
     private double price;
